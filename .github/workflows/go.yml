@@ -21,6 +21,9 @@ jobs:
     - name: Build
       run: make
 
+    - name: Release
+      run: make release
+
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v2
       with:
