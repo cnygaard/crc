@@ -20,7 +20,13 @@ jobs:
 
     - name: Build
       run: make
-      
+
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v2
+      with:
+        name: crc
+        path: ./cmd/crc
+        retention-days: 5
 
 #    - name: Test
 #      run: go test -v ./...
